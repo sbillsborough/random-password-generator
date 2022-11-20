@@ -95,11 +95,15 @@ function getPasswordOptions() {
   );
 
   if (promptValue >= 10 && promptValue <= 64) {
-    promptValue;
-    console.log(promptValue);
-  } else {
-    alert("Length is outside of the required parameters.");
-    location.reload();
+    passwordCharacters = "";
+    prompt("Include lowercase characters?");
+    if (true) {
+      passwordCharacters += lowerCasedCharacters;
+      console.log(passwordCharacters);
+    } else {
+      alert("Length is outside of the required parameters.");
+      location.reload();
+    }
   }
 }
 
