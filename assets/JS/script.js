@@ -164,12 +164,10 @@ function passwordCharactersEmpty() {
   }
 }
 
+// Function to check if passwordCharacters is empty
 function passwordCharactersEmpty() {
   if (passwordCharacters) {
     generatePassword();
-  } else {
-    alert("Must contain at least one character set!");
-    location.reload();
   }
 }
 
