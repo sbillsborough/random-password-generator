@@ -1,1 +1,60 @@
-# random-password-generator
+# Random Password Generator
+
+> Here goes your awesome project description!
+
+## Table of contents
+
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Live Application](#live-application)
+- [Features](#features)
+- [Status](#status)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
+
+## General info
+
+Made to practise functions, looping and adding JavaScript to the page.
+
+## Screenshots
+
+![Example screenshot](./assets/images/05-javascript-challenge-demo.png)
+
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
+
+## Setup
+
+- Open the index.html in any modern browser
+- Click the 'Generate Password' button to start
+
+## Live Application
+
+https://sbillsborough.github.io/random-password-generator/
+
+## Features
+
+List of features ready and TODOs for future development
+
+- Button to generate password
+- Checks for character sets that the user would like to
+  include in their password.
+- Will not produce a password if at least one character set
+  isn't selected.
+
+## Status
+
+Project is: _finished_
+
+## Inspiration
+
+Add here credits. Project inspired by..., based on...
+
+## Contact
+
+Created by [@sbillsborough](billsboroughscott@gmail.com) - feel free to contact me!
