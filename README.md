@@ -11,7 +11,6 @@
 - [Live Application](#live-application)
 - [Features](#features)
 - [Status](#status)
-- [Inspiration](#inspiration)
 - [Contact](#contact)
 
 ## General info
@@ -50,10 +49,6 @@ List of features ready and TODOs for future development
 ## Status
 
 Project is: _finished_
-
-## Inspiration
-
-Add here credits. Project inspired by..., based on...
 
 ## Contact
 
