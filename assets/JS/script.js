@@ -108,7 +108,7 @@ function getPasswordOptions() {
 }
 
 function addLowercase() {
-  var lowerCaseOption = confirm("Include lowercase?");
+  var lowerCaseOption = confirm("Include lowercase characters?");
   if (lowerCaseOption) {
     passwordCharacters += lowerCasedCharacters;
     passwordCharacters = passwordCharacters.replaceAll(",", "");
@@ -120,7 +120,7 @@ function addLowercase() {
 }
 
 function addUppercase() {
-  var upperCaseOption = confirm("Include uppercase?");
+  var upperCaseOption = confirm("Include uppercase characters?");
   if (upperCaseOption) {
     passwordCharacters += upperCasedCharacters;
     passwordCharacters = passwordCharacters.replaceAll(",", "");
@@ -132,7 +132,7 @@ function addUppercase() {
 }
 
 function addNumeric() {
-  var numericOption = confirm("Include numeric?");
+  var numericOption = confirm("Include numeric characters?");
   if (numericOption) {
     passwordCharacters += numericCharacters;
     passwordCharacters = passwordCharacters.replaceAll(",", "");
@@ -151,15 +151,6 @@ function addSpecial() {
     generatePassword();
   } else {
     passwordCharacters = passwordCharacters.replaceAll(",", "");
-    generatePassword();
-  }
-}
-
-function passwordCharactersEmpty() {
-  if (!passwordCharacters) {
-    alert("At least one character set must be selected");
-    location.reload();
-  } else {
     generatePassword();
   }
 }
