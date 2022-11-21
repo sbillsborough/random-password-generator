@@ -100,9 +100,6 @@ function getPasswordOptions() {
 
   promptValue = parseInt(promptValue);
 
-  console.log(typeof promptValue);
-  console.log(promptValue);
-
   if (promptValue >= 10 && promptValue <= 64) {
     addLowercase();
   } else {
@@ -115,11 +112,10 @@ function addLowercase() {
   var lowerCaseOption = confirm("Include lowercase?");
   if (lowerCaseOption) {
     passwordCharacters += lowerCasedCharacters;
-    console.log(passwordCharacters);
-    console.log(promptValue);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addUppercase();
   } else {
-    console.log(passwordCharacters);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addUppercase();
   }
 }
@@ -128,11 +124,10 @@ function addUppercase() {
   var upperCaseOption = confirm("Include uppercase?");
   if (upperCaseOption) {
     passwordCharacters += upperCasedCharacters;
-    console.log(passwordCharacters);
-    console.log(promptValue);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addNumeric();
   } else {
-    console.log(passwordCharacters);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addNumeric();
   }
 }
@@ -141,11 +136,10 @@ function addNumeric() {
   var numericOption = confirm("Include numeric?");
   if (numericOption) {
     passwordCharacters += numericCharacters;
-    console.log(passwordCharacters);
-    console.log(promptValue);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addSpecial();
   } else {
-    console.log(passwordCharacters);
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     addSpecial();
   }
 }
@@ -155,19 +149,12 @@ function addSpecial() {
   if (specialOption) {
     passwordCharacters += specialCharacters;
     passwordCharacters = passwordCharacters.replaceAll(",", "");
-    console.log(passwordCharacters);
-    console.log(promptValue);
     generatePassword();
   } else {
-    generatePassword();
     passwordCharacters = passwordCharacters.replaceAll(",", "");
-    console.log(passwordCharacters);
-    console.log(promptValue);
+    generatePassword();
   }
 }
-
-// passwordCharacters = passwordCharacters.replaceAll(",", "");
-// console.log(passwordCharacters);
 
 // Function to generate password with user input
 function generatePassword() {
@@ -175,7 +162,6 @@ function generatePassword() {
     var randomNum = Math.floor(Math.random() * passwordCharacters.length);
     passwordResult += passwordCharacters.substring(randomNum, randomNum + 1);
   }
-  console.log(passwordResult);
 }
 
 // Get references to the #generate element
@@ -184,7 +170,8 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   getPasswordOptions();
-  var password = generatePassword();
+  // var password = generatePassword();
+  var password = passwordResult;
   var passwordText = (document.querySelector("#password").value = password);
 }
 
