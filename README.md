@@ -1,6 +1,6 @@
 # Random Password Generator
 
-> Here goes your awesome project description!
+> A random password generator that takes in optional lowercase, uppercase, numeric and special characters.
 
 ## Table of contents
 
