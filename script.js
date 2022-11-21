@@ -90,7 +90,6 @@ var upperCasedCharacters = [
 
 var passwordCharacters = "";
 var passwordResult = "";
-var promptValue = "";
 
 // Functions to prompt user for password options
 function getPasswordOptions() {
