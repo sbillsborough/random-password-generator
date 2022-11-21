@@ -108,6 +108,8 @@ function getPasswordOptions() {
 }
 
 function addLowercase() {
+  passwordResult = "";
+  passwordCharacters = "";
   var lowerCaseOption = confirm("Include lowercase characters?");
   if (lowerCaseOption) {
     passwordCharacters += lowerCasedCharacters;
@@ -185,7 +187,6 @@ function writePassword() {
   getPasswordOptions();
   var password = passwordResult;
   var passwordText = (document.querySelector("#password").value = password);
-  passwordResult = "";
 }
 
 // Add event listener to generate button
