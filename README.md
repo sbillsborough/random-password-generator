@@ -52,4 +52,4 @@ Project is: _finished_
 
 ## Contact
 
-Created by [@sbillsborough](billsboroughscott@gmail.com) - feel free to contact me!
+Created by [billsboroughscott@gmail.com] - feel free to contact me!
