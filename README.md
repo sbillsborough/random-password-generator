@@ -38,8 +38,6 @@ https://sbillsborough.github.io/random-password-generator/
 
 ## Features
 
-List of features ready and TODOs for future development
-
 - Button to generate password
 - Checks for character sets that the user would like to
   include in their password.
