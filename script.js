@@ -89,12 +89,15 @@ var upperCasedCharacters = [
 ];
 
 var passwordCharacters = "";
+var passwordResult = "";
 
 // Functions to prompt user for password options
 function getPasswordOptions() {
   var promptValue = prompt(
     "Please pick your desired password length. Must be between 10 - 64 characters."
   );
+
+  console.log(promptValue);
 
   if (promptValue >= 10 && promptValue <= 64) {
     var passwordCharacters = "test";
@@ -146,14 +149,24 @@ function addSpecial() {
   var specialOption = confirm("Inlude special characters?");
   if (specialOption) {
     passwordCharacters += specialCharacters;
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     console.log(passwordCharacters);
+    generatePassword();
   } else {
+    generatePassword();
+    passwordCharacters = passwordCharacters.replaceAll(",", "");
     console.log(passwordCharacters);
   }
 }
 
 // Function to generate password with user input
-function generatePassword() {}
+function generatePassword() {
+  for (var i = 0; i <= passwordCharacters.length; i++) {
+    var randomNum = Math.floor(Math.random * passwordCharacters.length);
+    passwordResult += passwordCharacters.substring(randomNum, randomNum + 1);
+  }
+  console.log("result: ", passwordResult);
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -162,7 +175,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   getPasswordOptions();
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = (document.querySelector("#password").value =
+    passwordResult);
 
   passwordText.value = password;
 }
