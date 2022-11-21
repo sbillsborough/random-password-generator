@@ -155,11 +155,36 @@ function addSpecial() {
   }
 }
 
+function passwordCharactersEmpty() {
+  if (!passwordCharacters) {
+    alert("At least one character set must be selected");
+    location.reload();
+  } else {
+    generatePassword();
+  }
+}
+
+function passwordCharactersEmpty() {
+  if (passwordCharacters) {
+    generatePassword();
+  } else {
+    alert("Must contain at least one character set!");
+    location.reload();
+  }
+}
+
 // Function to generate password with user input
 function generatePassword() {
-  for (i = 0; i < promptValue; i++) {
-    var randomNum = Math.floor(Math.random() * passwordCharacters.length);
-    passwordResult += passwordCharacters.substring(randomNum, randomNum + 1);
+  if (passwordCharacters) {
+    for (i = 0; i < promptValue; i++) {
+      var randomNum = Math.floor(Math.random() * passwordCharacters.length);
+      passwordResult += passwordCharacters.substring(randomNum, randomNum + 1);
+    }
+  } else {
+    alert(
+      "Password must contain at least one character set. Please try again!"
+    );
+    location.reload();
   }
 }
 
