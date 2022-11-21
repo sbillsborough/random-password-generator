@@ -88,28 +88,68 @@ var upperCasedCharacters = [
   "Z",
 ];
 
-// Function to prompt user for password options
+var passwordCharacters = "";
+
+// Functions to prompt user for password options
 function getPasswordOptions() {
   var promptValue = prompt(
     "Please pick your desired password length. Must be between 10 - 64 characters."
   );
 
   if (promptValue >= 10 && promptValue <= 64) {
-    passwordCharacters = "";
-    prompt("Include lowercase characters?");
-    if (true) {
-      passwordCharacters += lowerCasedCharacters;
-      console.log(passwordCharacters);
-    } else {
-      alert("Length is outside of the required parameters.");
-      location.reload();
-    }
+    var passwordCharacters = "test";
+    console.log(passwordCharacters);
+    addLowercase();
+  } else {
+    alert("Length is outside of the required parameters.");
+    location.reload();
   }
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  arr[Math.floor(Math.random() * arr.length)];
+function addLowercase() {
+  var lowerCaseOption = confirm("Include lowercase?");
+  if (lowerCaseOption) {
+    passwordCharacters += lowerCasedCharacters;
+    console.log(passwordCharacters);
+    addUppercase();
+  } else {
+    console.log(passwordCharacters);
+    addUppercase();
+  }
+}
+
+function addUppercase() {
+  var upperCaseOption = confirm("Include uppercase?");
+  if (upperCaseOption) {
+    passwordCharacters += upperCasedCharacters;
+    console.log(passwordCharacters);
+    addNumeric();
+  } else {
+    console.log(passwordCharacters);
+    addNumeric();
+  }
+}
+
+function addNumeric() {
+  var numericOption = confirm("Include numeric?");
+  if (numericOption) {
+    passwordCharacters += numericCharacters;
+    console.log(passwordCharacters);
+    addSpecial();
+  } else {
+    console.log(passwordCharacters);
+    addSpecial();
+  }
+}
+
+function addSpecial() {
+  var specialOption = confirm("Inlude special characters?");
+  if (specialOption) {
+    passwordCharacters += specialCharacters;
+    console.log(passwordCharacters);
+  } else {
+    console.log(passwordCharacters);
+  }
 }
 
 // Function to generate password with user input
